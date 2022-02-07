@@ -1,0 +1,7 @@
+<table name="basic_module">
+    <column name="basic_srl" type="number" size="11" notnull="notnull" auto_increment="auto_increment" primary_key="primary_key" /> 
+    <column name="input_srl" type="varchar" size="55" notnull="notnull" />
+    <column name="text_srl" type="varchar" size="55" notnull="notnull" />
+</table>
+
+

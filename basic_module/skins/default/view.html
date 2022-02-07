@@ -1,0 +1,22 @@
+<load target="css/skin.css" />
+<load target="js/skin.js" />
+{@ print_r($basic_module)}
+<form  action="./" method="post"  class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+  <input type="hidden" name="act" value="procBasic_moduleDeleteApplication" />
+  <input type="hidden" name="basic_srl" value="{$basic_info->basic_srl}" />
+  <!-- <input type="hidden" name="success_return_url" value="{getRequestUriByServerEnviroment()}" /> -->
+  <input type="hidden" name="xe_validator_id" value="modules/basic_module/tpl/config/1" />
+<div class="w-full max-w-xs">
+    {$basic_info->basic_srl}
+    {$basic_info->input_srl}
+    {$basic_info->text_srl}
+    <!-- <p class="text-center text-gray-500 text-xs">
+      &copy;2020 Acme Corp. All rights reserved.
+    </p> -->
+  </div>
+  <a href="{getUrl('act','dispBasic_moduleInsert', 'basic_srl', $basic_info->basic_srl)}">수정</a>
+  <button type="submit" href="{getUrl('act','procBasic_moduleDeleteApplication', 'basic_srl', $basic_info->basic_srl)}">삭제</button>
+</form>
+<script>
+
+</script>

@@ -1,0 +1,9 @@
+<load target="css/skin.css" />
+<load target="js/skin.js" />
+
+<!--@foreach($basic_module as $key => $val)-->
+
+<div><a href="{getUrl('act','dispBasic_moduleView', 'basic_srl', $val->basic_srl)}">{$val->basic_srl}</a> {$val->input_srl} {$val->text_srl}</div>
+<!--@end-->
+
+<a href="{getUrl('act','dispBasic_moduleInsert')}">쓰기</a>
