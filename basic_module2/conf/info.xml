@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module version="0.2">
+	<title xml:lang="ko">basic_module</title>
+	<description xml:lang="ko">basic_module</description>
+	<version>1.0.0</version>
+	<date>2022-02-07</date>
+	<category>service</category>
+	<author email_address="" link="">
+		<name xml:lang="ko">CJG</name>
+	</author>
+</module>

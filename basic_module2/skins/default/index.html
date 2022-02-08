@@ -1,0 +1,148 @@
+<script src="https://cdn.tailwindcss.com"></script>
+<load target="css/skin.css" />
+<load target="js/skin.js" />
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<!--@foreach($basic_module as $key => $val)-->
+
+<div style="display:none" class=" list_{$val->basic_srl}"><a href="{getUrl('act','dispBasic_moduleView', 'basic_srl', $val->basic_srl)}">{$val->basic_srl}</a> {$val->input_srl} {$val->text_srl}</div>
+<!--@end-->
+
+<!-- 연습용 CSS -->
+<div class="section_all">
+    <div class="max-w-7xl mx-auto py-6 sm:px-6 lg:px-8">
+        <div class="md:grid md:grid-cols-3 md:gap-6">
+
+        <!-- Left -->
+        <div class="md:col-span-1">
+            <div class="px-4 sm:px-0">
+                <h3 class="text-lg font-medium leading-6 text-gray-900">
+                    <!-- Profile -->
+                </h3>
+                <p class="mt-1 text-sm text-gray-600">
+                    <!-- This information will be displayed publicly so be careful what you share. -->
+                </p>
+            </div>
+        </div>
+
+        <!-- Form -->
+        <div class="section_body_form">
+            <form action="#" method="POST">
+                <div class="section_form">
+                    <div class="px-4 py-5 bg-white space-y-6 sm:p-6">
+                        <!-- Website -->
+                        <div class="section_form_website">
+                            <div class="section_form_website_box">
+                                <label class="section_form_webste_text font-[200] md:font-bold ">
+                                    Website
+                                </label>
+                                <div class="section_form_website_box_two">
+                                    <span class="section_form_website_box_two_left">http://</span>
+                                    <input class="section_form_website_box_two_right" placeholder="www.example.com">
+                                </div>
+                            </div>
+                        </div>
+                         <!-- About -->
+                        <div class="section_about">
+                            <label class="section_about_text font-[200] md:font-bold">About</label><br/>
+                            <textarea class="section_about_form resize-x rounded-md" placeholder="you@example.com">
+                                
+                            </textarea>
+                            <p class="section_about_p">
+                                Brief description for your profile. URLs are hyperlinked.
+                            </p>
+                        </div>
+                         <!-- Photo -->
+                        <div  class="section_photo">
+                            <label class="section_photo_text font-[200] md:font-bold">Photo</label>
+                            <div class="mt-1 flex items-center">
+                                <span class="inline-block h-12 w-12 rounded-full overflow-hidden bg-gray-100"></span>
+                                <button class="ml-5 bg-white py-2 px-3 border border-gray-300 rounded-md shadow-sm text-sm leading-4 font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                                    Change
+                                </button>
+                            </div>
+                        </div>
+                         <!-- Cover photo -->
+                        <div class="section_cover">
+                            <label class="section_cover_text font-[200] md:font-bold">
+                                Cover photo
+                            </label>
+                            <div class="mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-gray-300 border-dashed rounded-md">
+                                <div class="space-y-1 text-center">
+                                    <div class="flex text-sm text-gray-600">
+                                        <label class="relative cursor-pointer bg-white rounded-md font-medium text-indigo-600 hover:text-indigo-500 focus-within:outline-none focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-indigo-500">
+                                            <span>
+                                                Upload a file
+                                            </span>
+                                            <input class="sr-only" name="file-upload">
+                                        </label>
+                                        <p class="pl-1">or drag and drop</p>
+                                    </div>
+                                    <p class="text-xs text-gray-500">
+                                        PNG, JPG, GIF up to 10MB
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 py-3 bg-gray-50 text-right sm:px-6">
+                        <button class="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500">
+                            Save
+                        </button>
+                    </div>
+                    <div class="ml-[1030px] my-[18px]">
+                    <button class="bg-gray-300 hover:bg-gray-400 text-gray-800 font-bold py-2 px-4 rounded inline-flex items-center">
+                        <svg class="fill-current w-4 h-4 mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M13 8V2H7v6H2l8 8 8-8h-5zM0 18h20v2H0v-2z"/></svg>
+                        <span>Download</span>
+                    </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+<!-- <a href="{getUrl('act','dispBasic_moduleInsert')}">쓰기</a> -->
+<br/><br/><br/><br/><br/>
+<div class="w-full max-w-xs mx-auto">
+    <!-- <div class="mb-5 message {$XE_VALIDATOR_MESSAGE_TYPE}" cond="$XE_VALIDATOR_MESSAGE">
+      <p>{$XE_VALIDATOR_MESSAGE}</p>
+    </div> -->
+      <form action="./" id="basic_module_Form" ruleset="basic_module_insert" method="post"  class="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
+          <input type="hidden" name="act" value="procBasic_moduleInsert" />
+          <input type="hidden" name="basic_srl" value="{$basic_info->basic_srl}" />
+          <!-- <input type="hidden" name="success_return_url" value="{getRequestUriByServerEnviroment()}" /> -->
+          <input type="hidden" name="xe_validator_id" value="modules/basic_module/tpl/config/1" />
+        <div class="mb-4">
+          <!-- <label class="block text-gray-700 text-sm font-bold mb-2" for="text1">
+              {$basic_srl->input_srl}
+              <p class="font-bold mb-2">{$val->input_srl}</p>
+          </label> -->
+          <input type="text" id="text_name_one" name="text_name_one" value="" placeholder="text1">
+        </div>
+        <div class="mb-4">
+          <!-- <label class="block text-gray-700 text-sm font-bold mb-2" for="text2">
+              <p class="font-bold mb-2">{$val->text_srl}</p>
+          </label> -->
+          <input type="text" id="text_name_two"  name="text_name_two" value="" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="text2">
+        </div>
+        <div class="flex items-center justify-between">
+          <button type="submit" href="{getUrl('','mid','basic_module','act','dispBasic_moduleIndex')}" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline" type="button">
+            SAVE
+          </button>
+          <!-- <a class="inline-block align-baseline font-bold text-sm text-blue-500 hover:text-blue-800" href="#">
+            Forgot Password?
+          </a> -->
+        </div>
+      </form>
+      <!-- <p class="text-center text-gray-500 text-xs">
+        &copy;2020 Acme Corp. All rights reserved.
+      </p> -->
+    </div>
+  

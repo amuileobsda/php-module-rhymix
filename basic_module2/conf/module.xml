@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<module>
+	<grants>
+	</grants>
+	<actions>
+		<!-- 관리자 액션 -->
+		<action name="dispBasic_moduleAdminConfig" type="view" menu_name="basic_module" admin_index="true" />
+		<action name="procBasic_moduleAdminInsertConfig" type="controller" />
+		
+		<!-- 일반 액션 뷰-->
+		<action name="dispBasic_moduleIndex" type="view" index="true" />
+		<action name="dispBasic_moduleInsert" type="view" />
+		<action name="dispBasic_moduleView" type="view" />
+
+
+		<!-- 일반 액션 컨트롤러 -->
+		 <!-- ruleset="basic_module_insert" -->
+		<action name="procBasic_moduleInsert" type="controller"  ruleset="basic_module_insert"/>
+		<action name="procBasic_moduleEdit" type="controller" />
+        <action name="procBasic_moduleDeleteApplication" type="controller"/>
+		
+		
+		<!-- 일반 액션 모델 -->
+		<action name="getBasic_moduleList" type="model" />
+		<action name="getBasic_moduleInfo" type="model" />
+		<!-- <action name="getBasic_moduleAsynctask" type="model" /> -->
+
+	</actions>
+	<menus>
+		<menu name="basic_module" type="all">
+			<title xml:lang="ko">basic_module</title>
+		</menu>
+	</menus>
+</module>
+
+

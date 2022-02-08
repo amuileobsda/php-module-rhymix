@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ruleset version="1.5.0">
+    <customrules>
+    </customrules>
+    <fields>
+		<field name="text_name_one" required="true" type="text">
+            <title><![CDATA[프로필 이름1]]></title>
+        </field>
+		<field name="text_name_two" required="true" type="text">
+            <title><![CDATA[프로필 이름2]]></title>
+        </field>
+    </fields>
+</ruleset>
+
+
